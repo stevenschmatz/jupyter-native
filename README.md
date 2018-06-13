@@ -21,7 +21,7 @@ nativefier --name "Jupyter Lab" "http://localhost:8888/"
 nativefier --name "Jupyter Notebook" "http://localhost:8888/"
 ```
 
-This will create native applications called "Jupyter Lab" and "Jupyter Notebook" in your `/Applications` folder.
+This will create native applications called "Jupyter Lab" and "Jupyter Notebook". 
 
 ### 3. Add this repo's script to your .bash_profile or .zshrc
 
