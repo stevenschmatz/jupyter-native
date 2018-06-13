@@ -1,5 +1,6 @@
-# jupyter-lab-native
-Run Jupyter Lab natively on Mac!
+# Jupyter Native
+
+Run [Jupyter Lab](https://github.com/jupyterlab/jupyterlab) and [Jupyter Notebook](http://jupyter.org/) natively and seamlessly!
 
 ![Jupyter Lab, Native (GUI)](img/gui.png)
 
@@ -39,3 +40,31 @@ if [ -f ~/.zshrc ]; then cat jupyter-native.sh >> ~/.zshrc; fi
 ### 4. Run `lab` or `notebook` in your terminal!
 
 ![Jupyter Lab, Native (terminal)](img/term.png)
+
+## But why?
+
+1. Years of using macOS and web browsers has drilled the tab-switching shortcuts `⌘⇧[` and `⌘⇧]` completely drilled into my mind. Unfortunately, this is incompatible with Jupyter Lab.
+
+These can be solved by installing this repo, navigating to the advanced settings editor (`⌘,`) and adding the following custom shortcut override to Jupyter Lab:
+
+```json
+{
+    "application:activate-next-tab": {
+        "command": "application:activate-next-tab",
+        "keys": [
+            "Accel Shift ]"
+        ],
+        "selector": "body"
+    },
+
+    "application:activate-previous-tab": {
+      "command": "application:activate-previous-tab",
+      "keys": [
+        "Accel Shift ["
+      ],
+      "selector": "body"
+    }
+}
+```
+
+2. Using nativefier by itself provides a subpar experience, because copying the token from the URL and closing the original web window can still be annoying.
